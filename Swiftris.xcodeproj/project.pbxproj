@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A639E0531D15542B00D72AD7 /* Swiftris.swift in Sources */ = {isa = PBXBuildFile; fileRef = A639E0521D15542B00D72AD7 /* Swiftris.swift */; };
 		A6AF7D2B1D1529EB00AB0097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AF7D2A1D1529EB00AB0097 /* AppDelegate.swift */; };
 		A6AF7D2F1D1529EB00AB0097 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AF7D2E1D1529EB00AB0097 /* GameScene.swift */; };
 		A6AF7D311D1529EB00AB0097 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AF7D301D1529EB00AB0097 /* GameViewController.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A639E0521D15542B00D72AD7 /* Swiftris.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swiftris.swift; sourceTree = "<group>"; };
 		A6AF7D271D1529EB00AB0097 /* Swiftris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6AF7D2A1D1529EB00AB0097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6AF7D2E1D1529EB00AB0097 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -126,16 +128,17 @@
 				A6AF7D2A1D1529EB00AB0097 /* AppDelegate.swift */,
 				A6AF7D2E1D1529EB00AB0097 /* GameScene.swift */,
 				A6AF7D301D1529EB00AB0097 /* GameViewController.swift */,
+				A639E0521D15542B00D72AD7 /* Swiftris.swift */,
 				A6AF7D621D1530F800AB0097 /* Array2D.swift */,
 				A6AF7D641D1535A600AB0097 /* Block.swift */,
 				A6AF7D661D15394D00AB0097 /* Shape.swift */,
-				A6AF7D681D153F6300AB0097 /* SquareShape.swift */,
+				A6AF7D701D154B8D00AB0097 /* JShape.swift */,
 				A6AF7D6C1D1547BB00AB0097 /* LineShape.swift */,
 				A6AF7D6E1D1549AA00AB0097 /* LShape.swift */,
-				A6AF7D701D154B8D00AB0097 /* JShape.swift */,
+				A6AF7D681D153F6300AB0097 /* SquareShape.swift */,
 				A6AF7D721D154D2000AB0097 /* SShape.swift */,
-				A6AF7D741D154E7100AB0097 /* ZShape.swift */,
 				A6AF7D6A1D15412800AB0097 /* TShape.swift */,
+				A6AF7D741D154E7100AB0097 /* ZShape.swift */,
 				A6AF7D321D1529EB00AB0097 /* Main.storyboard */,
 				A6AF7D351D1529EB00AB0097 /* Assets.xcassets */,
 				A6AF7D601D152C2B00AB0097 /* Sprites.atlas */,
@@ -301,6 +304,7 @@
 				A6AF7D691D153F6300AB0097 /* SquareShape.swift in Sources */,
 				A6AF7D2F1D1529EB00AB0097 /* GameScene.swift in Sources */,
 				A6AF7D711D154B8D00AB0097 /* JShape.swift in Sources */,
+				A639E0531D15542B00D72AD7 /* Swiftris.swift in Sources */,
 				A6AF7D671D15394D00AB0097 /* Shape.swift in Sources */,
 				A6AF7D631D1530F800AB0097 /* Array2D.swift in Sources */,
 				A6AF7D6D1D1547BB00AB0097 /* LineShape.swift in Sources */,
@@ -536,6 +540,7 @@
 				A6AF7D551D1529EB00AB0097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6AF7D561D1529EB00AB0097 /* Build configuration list for PBXNativeTarget "SwiftrisTests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +549,7 @@
 				A6AF7D581D1529EB00AB0097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6AF7D591D1529EB00AB0097 /* Build configuration list for PBXNativeTarget "SwiftrisUITests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +558,7 @@
 				A6AF7D5B1D1529EB00AB0097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
