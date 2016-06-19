@@ -125,6 +125,7 @@
 		A6AF7D291D1529EB00AB0097 /* Swiftris */ = {
 			isa = PBXGroup;
 			children = (
+				A6AF7D321D1529EB00AB0097 /* Main.storyboard */,
 				A6AF7D2A1D1529EB00AB0097 /* AppDelegate.swift */,
 				A6AF7D2E1D1529EB00AB0097 /* GameScene.swift */,
 				A6AF7D301D1529EB00AB0097 /* GameViewController.swift */,
@@ -139,7 +140,6 @@
 				A6AF7D721D154D2000AB0097 /* SShape.swift */,
 				A6AF7D6A1D15412800AB0097 /* TShape.swift */,
 				A6AF7D741D154E7100AB0097 /* ZShape.swift */,
-				A6AF7D321D1529EB00AB0097 /* Main.storyboard */,
 				A6AF7D351D1529EB00AB0097 /* Assets.xcassets */,
 				A6AF7D601D152C2B00AB0097 /* Sprites.atlas */,
 				A6AF7D5C1D152BFD00AB0097 /* Sounds */,

@@ -9,9 +9,10 @@
 import UIKit
 import SpriteKit
 
-class GameViewController: UIViewController, SwritrisDelegate {
+class GameViewController: UIViewController, SwritrisDelegate, UIGestureRecognizerDelegate {
     var scene: GameScene!
     var swiftris:Swiftris!
+    var panPointReference:CGPoint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,49 @@ class GameViewController: UIViewController, SwritrisDelegate {
 
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    @IBAction func didTap(sender: UITapGestureRecognizer) {
+        swiftris.rotateShape()
+    }
+    
+    @IBAction func didPan(sender: UIPanGestureRecognizer) {
+        let currentPoint = sender.translationInView(self.view)
+        if let originalPoint = panPointReference {
+            if abs(currentPoint.x - originalPoint.x) > (BlockSize * 0.9) {
+                if sender.velocityInView(self.view).x > CGFloat(0) {
+                    swiftris.moveShapeRight()
+                    panPointReference = currentPoint
+                } else {
+                    swiftris.moveShapeLeft()
+                    panPointReference = currentPoint
+                }
+            }
+        } else if sender.state == .Began {
+            panPointReference = currentPoint
+        }
+        
+    }
+    
+    @IBAction func didSwipe(sender: UISwipeGestureRecognizer) {
+        swiftris.dropShape()
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailByGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        if gestureRecognizer is UISwipeGestureRecognizer {
+            if otherGestureRecognizer is UIPanGestureRecognizer {
+                return true
+            }
+        } else if gestureRecognizer is UIPanGestureRecognizer {
+            if otherGestureRecognizer is UITapGestureRecognizer {
+                return true
+            }
+        }
+        return false
     }
     
     func didTick() {
@@ -75,7 +119,10 @@ class GameViewController: UIViewController, SwritrisDelegate {
     }
     
     func gameShapeDidDrop(swiftris: Swiftris) {
-        
+        scene.stopTicking()
+        scene.redrawShape(swiftris.fallingShape!) {
+            swiftris.letShapeFall()
+        }
     }
     
     func gameShapeDidLand(swiftris: Swiftris) {
